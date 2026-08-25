@@ -2,6 +2,12 @@
 #   url:      empty renders as plain text rather than a dead link
 #   archived: set true when `url` points at a Wayback capture because the
 #             original site is gone -- the table then labels it as archived
+#
+# The 2015 and 2016 meetings ran under the series' earlier name, "Meeting on
+# Algebraic Geometry for Applications" (MAGA), which is why those archived
+# pages do not say "MAAG". The series was renamed afterwards to avoid the
+# political connotations the old acronym had acquired. Both links are correct;
+# their original sites are offline.
 - year: 2026
   host: Clemson University
   location: "Clemson, South Carolina"
@@ -25,13 +31,10 @@
 - year: 2016
   host: Clemson University
   location: "Clemson, South Carolina"
-  # The 2016 meeting ran under an earlier name, which is why the archived
-  # page's title does not say "MAAG" -- the series was renamed afterwards to
-  # avoid the political connotations the old acronym had acquired. This is the
-  # right link; the original site (math.clemson.edu/aca/maga16/) is offline.
   url: "https://web.archive.org/web/20250430035832/https://www.math.clemson.edu/aca/maga16/"
   archived: true
 - year: 2015
   host: Georgia Institute of Technology
   location: "Atlanta, Georgia"
-  url: ""
+  url: "https://web.archive.org/web/20201015232747/https://sites.google.com/site/magaspring15/"
+  archived: true
