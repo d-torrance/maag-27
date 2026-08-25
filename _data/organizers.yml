@@ -5,6 +5,11 @@
 #   last_name: required -- the sort key
 #   website:   personal page; omit or "" renders the name as plain text
 #   email:     only include addresses the person has agreed to publish
+- name: "Greg Blekherman"
+  last_name: Blekherman
+  affiliation: "Georgia Institute of Technology"
+  website: "https://sites.google.com/site/grrigg/"
+  email: ""
 - name: "Anton Leykin"
   last_name: Leykin
   affiliation: "Georgia Institute of Technology"
@@ -20,3 +25,8 @@
   affiliation: "Georgia Institute of Technology"
   website: "https://d-torrance.github.io"
   email: "dtorrance9@gatech.edu"
+- name: "Josephine Yu"
+  last_name: Yu
+  affiliation: "Georgia Institute of Technology"
+  website: "https://sites.gatech.edu/josephineyu/"
+  email: ""
