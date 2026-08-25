@@ -1,0 +1,81 @@
+.hero {
+  // Gradient-only brand colours used exactly as the guide intends: as a fill.
+  background: linear-gradient(135deg, var(--gt-navy) 0%, var(--gt-med-navy) 100%);
+  color: var(--gt-white);
+  padding-block: var(--space-2xl);
+  border-bottom: 6px solid var(--gt-gold);
+}
+
+.hero__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-xl);
+}
+.hero__text { flex: 1 1 34rem; min-width: 0; }
+
+// The tropical curve dual to a triangulated degree-5 triangle -- the motif
+// from the 2018 MAAG logo. Decorative; hidden from assistive tech.
+.hero__mark {
+  flex: 0 1 20rem;
+  display: flex;
+  justify-content: flex-end;
+  color: var(--gt-gold);
+}
+.hero__mark .mark { width: 100%; height: auto; max-height: 17rem; }
+.mark__curve { stroke: var(--gt-buzz); }
+.mark__grid  { stroke: var(--gt-light-gold); }
+
+.hero__eyebrow {
+  font-family: var(--font-slab);
+  font-size: var(--step--1);
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gt-light-gold);
+  margin-bottom: var(--space-xs);
+}
+
+.hero__title {
+  font-size: var(--step-4);
+  margin-bottom: var(--space-md);
+}
+
+// One fact per line. An inline run with interpuncts looked fine at full
+// width, but the mark narrows this column enough that it wrapped and left
+// orphaned separators at the start of lines.
+.hero__meta {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xs);
+  list-style: none;
+  margin: 0 0 var(--space-lg);
+  padding: 0;
+  font-size: var(--step-1);
+}
+.hero__meta-item:first-child {
+  font-weight: 500;
+  color: var(--gt-light-gold);
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-md);
+}
+.hero__actions .cta-note {
+  margin: 0;
+  font-size: var(--step--1);
+  color: var(--gt-burdell);
+}
+
+@media (max-width: 900px) {
+  // Below this the mark squeezes the title; drop it rather than shrink it to
+  // an illegible smudge.
+  .hero__mark { display: none; }
+}
+
+@media (max-width: 700px) {
+  .hero__meta { font-size: var(--step-0); }
+}

@@ -1,0 +1,55 @@
+{%- assign nsf = site.data.support.nsf -%}
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__grid">
+      <div>
+        <h2 class="site-footer__heading">{{ site.title }}</h2>
+        <p>
+          {{ site.tagline }}<br>
+          {{ site.event.dates_display }}<br>
+          {{ site.event.venue }}<br>
+          {{ site.event.address }}
+        </p>
+      </div>
+
+      <div>
+        <h2 class="site-footer__heading">Organizers</h2>
+        <p class="site-footer__muted">Georgia Tech School of Mathematics</p>
+        <ul class="plain-list">
+          {%- assign organizers = site.data.organizers | sort: "last_name" -%}
+          {%- for o in organizers %}
+          <li>
+            {%- if o.website and o.website != "" -%}
+              <a href="{{ o.website }}">{{ o.name }}</a>
+            {%- else -%}
+              {{ o.name }}
+            {%- endif -%}
+            {%- if o.affiliation and o.affiliation != "" and o.affiliation != site.event.host %} <span class="site-footer__muted">({{ o.affiliation }})</span>{% endif -%}
+          </li>
+          {%- endfor %}
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="site-footer__heading">Support</h2>
+        <p>
+          This meeting is supported by the National Science Foundation
+          under award {{ nsf.award_number }}.
+        </p>
+        <ul class="plain-list">
+          {%- for s in site.data.support.other %}
+          <li><a href="{{ s.url }}">{{ s.name }}</a></li>
+          {%- endfor %}
+        </ul>
+        <p><a href="{{ '/conduct/' | relative_url }}">Code of conduct</a></p>
+      </div>
+    </div>
+
+    <p class="site-footer__disclaimer">{{ nsf.disclaimer }}</p>
+    <p class="site-footer__disclaimer">
+      MAAG 2027 is hosted by the Georgia Tech School of Mathematics. This site
+      is maintained by the organizing committee and is not an official
+      publication of the Georgia Institute of Technology.
+    </p>
+  </div>
+</footer>

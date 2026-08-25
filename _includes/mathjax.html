@@ -1,0 +1,36 @@
+{%- comment -%}
+  MathJax 3, loaded only on pages that ask for it (front matter `math: true`).
+
+  kramdown runs with `math_engine: null` (see _config.yml), so it detects math
+  and emits it with delimiters intact, wrapped in `.kdmath`:
+      inline:  <span class="kdmath">$...$</span>
+      display: <div class="kdmath">$$...$$</div>
+
+  We therefore tell MathJax to ignore the document by default and process only
+  those `.kdmath` containers. Without this, MathJax would scan all prose for
+  `$...$` and mangle ordinary dollar amounts ("expenses over $25 ... $50").
+
+  The version is pinned so the integrity hash stays valid -- a floating
+  `mathjax@3` URL would break SRI on the next patch release. To upgrade:
+    curl -sL https://cdn.jsdelivr.net/npm/mathjax@X.Y.Z/es5/tex-chtml.js \
+      | openssl dgst -sha384 -binary | openssl base64 -A
+{%- endcomment -%}
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      processEscapes: true
+    },
+    options: {
+      // <body> carries `tex2jax_ignore`; only `.kdmath` is opted back in.
+      ignoreHtmlClass: 'tex2jax_ignore',
+      processHtmlClass: 'kdmath',
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+  };
+</script>
+<script defer
+        src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml.js"
+        integrity="sha384-AHAnt9ZhGeHIrydA1Kp1L7FN+2UosbF7RQg6C+9Is/a7kDpQ1684C2iH2VWil6r4"
+        crossorigin="anonymous"></script>

@@ -1,0 +1,17 @@
+{%- comment -%}
+  Usage:
+    {% include register-button.html show_deadline=true %}
+    {% include register-button.html variant="btn--solid-navy" label="Register" %}
+  Renders a disabled placeholder when site.registration.open is false.
+{%- endcomment -%}
+{%- assign r = site.registration -%}
+{%- if r.open -%}
+  <a class="btn {{ include.variant | default: 'btn--primary' }}"
+     href="{{ r.url }}" target="_blank" rel="noopener">{{ include.label | default: "Register for MAAG 2027" }}<span
+     class="visually-hidden"> (opens in a new tab)</span></a>
+  {%- if include.show_deadline and r.deadline_display %}
+  <p class="cta-note">Registration closes {{ r.deadline_display }}.</p>
+  {%- endif -%}
+{%- else -%}
+  <span class="btn {{ include.variant | default: 'btn--primary' }}" aria-disabled="true">{{ r.closed_message }}</span>
+{%- endif -%}

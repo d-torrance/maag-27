@@ -1,0 +1,108 @@
+# ---------------------------------------------------------------------------
+# Site identity
+# ---------------------------------------------------------------------------
+title: "MAAG 2027"
+tagline: "Meeting on Applied Algebraic Geometry"
+description: >-
+  The Meeting on Applied Algebraic Geometry (MAAG 2027), April 16-18, 2027, at
+  the Georgia Institute of Technology School of Mathematics in Atlanta. A
+  regional gathering with invited talks, a Macaulay2 mini-workshop, and a
+  poster session.
+
+url: "https://d-torrance.github.io"
+baseurl: "/maag-27"
+lang: en
+timezone: America/New_York
+
+author:
+  name: "MAAG 2027 organizing committee"
+github_username: d-torrance
+
+# ---------------------------------------------------------------------------
+# Event facts -- single source of truth for the templates.
+# ---------------------------------------------------------------------------
+event:
+  start_date: 2027-04-16
+  end_date: 2027-04-18
+  dates_display: "April 16–18, 2027"
+  days_display: "Friday-Sunday"
+  host: "Georgia Institute of Technology"
+  venue: "Skiles Building, Georgia Institute of Technology"
+  address: "686 Cherry Street NW, Atlanta, GA 30332"
+  city: "Atlanta, Georgia"
+  # No conference mailbox exists -- this is an organizer's address.
+  contact_email: "dtorrance9@gatech.edu"
+
+registration:
+  # Flip to true once the Google Form exists and `url` below is filled in.
+  open: false
+  url: "https://docs.google.com/forms/d/e/REPLACE_ME/viewform"
+  deadline_display: "March 12, 2027"
+  travel_support_deadline_display: "February 12, 2027"
+  closed_message: "Registration opens in fall 2026"
+
+# ---------------------------------------------------------------------------
+# Navigation -- adding a page is one entry here.
+# NOTE: _config.yml is not watched by `jekyll serve`; restart after editing.
+# ---------------------------------------------------------------------------
+nav:
+  - title: Overview
+    url: /
+  - title: Talks
+    url: /talks/
+  - title: Schedule
+    url: /schedule/
+  - title: Mini-Workshop
+    url: /workshop/
+  - title: Posters
+    url: /posters/
+  - title: Participant Info
+    url: /participant-info/
+  - title: Funding
+    url: /funding/
+  - title: Conduct
+    url: /conduct/
+  - title: Past Meetings
+    url: /past-meetings/
+  - title: Register
+    url: "https://docs.google.com/forms/d/e/REPLACE_ME/viewform"
+    external: true
+    cta: true
+
+# ---------------------------------------------------------------------------
+# Build
+# ---------------------------------------------------------------------------
+permalink: pretty
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  # Pass $$...$$ through untouched so MathJax 3 can see it. kramdown's own
+  # math output is the legacy <script type="math/tex"> form, which MathJax 3
+  # ignores.
+  math_engine: null
+  syntax_highlighter: rouge
+
+collections:
+  speakers:
+    output: false
+  posters:
+    output: false
+  workshop:
+    output: false
+
+sass:
+  style: compressed
+  sass_dir: _sass
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - tools          # build-time art generator; not part of the site
+  - vendor
+  - .bundle

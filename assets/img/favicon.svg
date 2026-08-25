@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- MAAG mark reduced to a single balanced trivalent vertex: the local
+     picture of a smooth point of a tropical curve, and the atom of the
+     honeycomb drawn in full by _includes/mark.svg.
+
+     The stem points UP. The honeycomb contains vertices of both orientations
+     (dual to the upward and downward triangles of the subdivision), so this
+     is just as faithful as the other one, and it avoids reading as a letter
+     "Y", which is not in MAAG.
+
+     Deliberately not the Georgia Tech logo or the Buzz mascot. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img"
+     aria-label="MAAG 2027">
+  <rect width="64" height="64" rx="10" fill="#051E39"/>
+  <g fill="none" stroke="#B39051" stroke-width="7" stroke-linecap="round"
+     stroke-linejoin="round">
+    <!-- Balanced at (32,30): (-1,1) + (1,1) + (0,-2) = 0 -->
+    <path d="M32 30 L32 10"/>
+    <path d="M32 30 L12 50"/>
+    <path d="M32 30 L52 50"/>
+  </g>
+</svg>

@@ -1,0 +1,20 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#051E39">
+
+{%- comment -%}
+  jekyll-seo-tag emits <title>, description, canonical, Open Graph and
+  Twitter card tags from _config.yml and each page's front matter.
+{%- endcomment -%}
+{% seo %}
+
+<link rel="icon" href="{{ '/assets/img/favicon.svg' | relative_url }}" type="image/svg+xml">
+
+{%- comment -%} Self-hosted fonts: no third-party request. {%- endcomment -%}
+<link rel="preload" as="font" type="font/woff2" crossorigin
+      href="{{ '/assets/fonts/roboto-latin-wght-normal.woff2' | relative_url }}">
+<link rel="preload" as="font" type="font/woff2" crossorigin
+      href="{{ '/assets/fonts/roboto-slab-latin-wght-normal.woff2' | relative_url }}">
+
+<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+

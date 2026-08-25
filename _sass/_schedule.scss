@@ -1,0 +1,125 @@
+.schedule-day { margin-bottom: var(--space-2xl); }
+
+.schedule-day__heading {
+  font-family: var(--font-slab);
+  border-bottom: 3px solid var(--gt-gold);
+  padding-bottom: var(--space-xs);
+  margin-bottom: var(--space-sm);
+}
+.schedule-day__room,
+.schedule-day__note {
+  color: var(--color-text-muted);
+  font-size: var(--step--1);
+  margin-bottom: var(--space-xs);
+  max-width: var(--measure);
+}
+
+// Single track, so two columns only: Time and Session.
+.schedule {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--step--1);
+  margin-top: var(--space-md);
+}
+.schedule th,
+.schedule td {
+  text-align: left;
+  padding: var(--space-sm) var(--space-md);
+  border-bottom: 1px solid var(--color-rule);
+  vertical-align: top;
+}
+.schedule thead th {
+  background: var(--gt-navy);
+  color: var(--gt-white);
+  font-family: var(--font-slab);
+  font-weight: 500;
+  border-bottom: none;
+}
+.schedule tbody th[scope="row"] {
+  white-space: nowrap;
+  width: 1%;
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  color: var(--color-accent);
+}
+
+.slot__who {
+  display: block;
+  font-weight: 500;
+}
+.slot__what { display: block; }
+.slot__what--error { color: var(--gt-azalea); font-weight: 700; }
+.slot__room {
+  display: block;
+  margin-top: var(--space-2xs);
+  color: var(--color-text-muted);
+  font-size: 0.9em;
+}
+
+.slot--break    > * { background: var(--gt-diploma); }
+.slot--social   > * { background: var(--gt-diploma); }
+.slot--poster   > * { background: #F6E9F6; }
+.slot--workshop > * { background: #E9F5EF; }
+
+// Dark Gold clears AA on white (4.57:1) but NOT on any of the row tints
+// (4.21, 4.08, 3.89). Tinted rows get navy instead -- the bold tabular
+// numerals still read as the row's anchor.
+.schedule tbody .slot--break    th[scope="row"],
+.schedule tbody .slot--social   th[scope="row"],
+.schedule tbody .slot--poster   th[scope="row"],
+.schedule tbody .slot--workshop th[scope="row"] { color: var(--color-text); }
+
+// --- Mobile: stack each row into a labelled block -----------------------
+// Changing `display` on table elements strips implicit table roles in some
+// browser/AT combinations, which is why the markup carries explicit
+// role="table|row|rowheader|cell". Keep them in sync with this block.
+@media (max-width: 700px) {
+  .schedule thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip-path: inset(50%);
+    overflow: hidden;
+  }
+  .schedule,
+  .schedule tbody,
+  .schedule tr,
+  .schedule th,
+  .schedule td {
+    display: block;
+    width: auto;
+  }
+  .schedule tr {
+    border: 1px solid var(--color-rule);
+    border-left: 4px solid var(--gt-gold);
+    border-radius: var(--radius);
+    margin-bottom: var(--space-md);
+    padding: var(--space-sm) var(--space-md);
+    background: var(--color-surface);
+  }
+  .schedule th,
+  .schedule td {
+    border-bottom: 0;
+    padding: var(--space-2xs) 0;
+    background: none;   // the tint moves to the <tr> below
+  }
+  .schedule tbody th[scope="row"] {
+    font-size: var(--step-0);
+    border-bottom: 1px solid var(--color-rule);
+    padding-bottom: var(--space-xs);
+    margin-bottom: var(--space-xs);
+    width: auto;
+  }
+  // These must out-specify `.schedule tr { background: var(--color-surface) }`
+  // above, hence the tr qualifier.
+  .schedule tr.slot--break,
+  .schedule tr.slot--social   { background: var(--gt-diploma); }
+  .schedule tr.slot--poster   { background: #F6E9F6; }
+  .schedule tr.slot--workshop { background: #E9F5EF; }
+
+  // Same contrast override as the desktop rules above.
+  .schedule tbody .slot--break    th[scope="row"],
+  .schedule tbody .slot--social   th[scope="row"],
+  .schedule tbody .slot--poster   th[scope="row"],
+  .schedule tbody .slot--workshop th[scope="row"] { color: var(--color-text); }
+}

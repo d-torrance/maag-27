@@ -1,0 +1,74 @@
+// Georgia Tech palette and design tokens.
+//
+// These are CSS custom properties, not Sass variables, so every other partial
+// can use them without importing anything.
+//
+// Source: https://brand.gatech.edu/our-look/colors
+// Contrast ratios noted below were computed against the actual hex values.
+// See the "Colour contrast" table in README.md before introducing a new pair --
+// several of the GT brand colours fail WCAG AA as text.
+
+:root {
+  /* --- GT core ------------------------------------------------------- */
+  --gt-gold:        #B39051;  /* decorative, or text on navy -- NOT on white */
+  --gt-white:       #FFFFFF;
+  --gt-navy:        #051E39;
+  --gt-dark-gold:   #8F713D;  /* the only gold safe as text on white (4.57:1) */
+
+  /* --- Secondary ----------------------------------------------------- */
+  --gt-diploma:     #F9F6E5;
+  --gt-buzz:        #EAAA00;  /* on navy only -- 2.05:1 on white */
+
+  /* --- Accents ------------------------------------------------------- */
+  --gt-campanile:   #048A81;
+  --gt-whistle:     #660064;
+  --gt-burdell:     #BBE6F2;
+  --gt-azalea:      #D90368;
+  --gt-tech-lawn:   #066034;
+
+  /* --- Gradient-only per the brand guide: fills, never text ---------- */
+  --gt-light-gold:  #DEBD88;
+  --gt-med-navy:    #003D69;
+  --gt-bright-blue: #004C97;
+
+  /* --- Semantic roles ------------------------------------------------ */
+  --color-bg:          var(--gt-white);
+  --color-bg-alt:      var(--gt-diploma);
+  --color-surface:     var(--gt-white);
+  --color-text:        var(--gt-navy);
+  --color-text-muted:  #4A5568;
+  --color-link:        #0B3C6B;              /* ~9:1 on white */
+  --color-link-hover:  var(--gt-azalea);     /* 5.04:1 on white */
+  --color-accent:      var(--gt-dark-gold);  /* always with font-weight >= 500 */
+  --color-rule:        #D8D2C0;
+  --color-header-bg:   var(--gt-navy);
+  --color-header-text: var(--gt-white);
+  --color-focus:       var(--gt-buzz);       /* on navy surfaces */
+  --color-focus-dark:  var(--gt-navy);       /* on light surfaces */
+
+  /* --- Typography ---------------------------------------------------- */
+  --font-sans: "Roboto", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-slab: "Roboto Slab", Georgia, "Times New Roman", serif;
+
+  --step--1: clamp(0.875rem, 0.85rem + 0.15vw, 0.9375rem);
+  --step-0:  clamp(1rem, 0.96rem + 0.2vw, 1.125rem);
+  --step-1:  clamp(1.25rem, 1.15rem + 0.5vw, 1.5rem);
+  --step-2:  clamp(1.5rem, 1.3rem + 1vw, 2rem);
+  --step-3:  clamp(1.875rem, 1.5rem + 1.8vw, 2.75rem);
+  --step-4:  clamp(2.25rem, 1.6rem + 3.2vw, 4rem);
+
+  /* --- Space and shape ----------------------------------------------- */
+  --space-2xs: 0.25rem;
+  --space-xs:  0.5rem;
+  --space-sm:  0.75rem;
+  --space-md:  1rem;
+  --space-lg:  1.5rem;
+  --space-xl:  2.5rem;
+  --space-2xl: 4rem;
+
+  --radius: 4px;
+  --measure: 68ch;
+  --container: 68rem;
+  --shadow-sm: 0 1px 2px rgba(5, 30, 57, 0.08),
+               0 2px 8px rgba(5, 30, 57, 0.06);
+}

@@ -1,0 +1,24 @@
+<div class="hero">
+  <div class="container hero__inner">
+    <div class="hero__text">
+      <p class="hero__eyebrow">{{ site.tagline }}</p>
+      <h1 class="hero__title">{{ site.title }}</h1>
+      <ul class="hero__meta">
+        <li class="hero__meta-item">
+          <time datetime="{{ site.event.start_date | date: '%Y-%m-%d' }}">{{ site.event.dates_display }}</time>
+        </li>
+        <li class="hero__meta-item">{{ site.event.venue }}</li>
+        <li class="hero__meta-item">{{ site.event.city }}</li>
+      </ul>
+      <div class="hero__actions">
+        {% include register-button.html show_deadline=true %}
+      </div>
+    </div>
+
+    {%- comment -%}
+      Decorative only -- aria-hidden inside the SVG, and the surrounding
+      figure carries no text, so screen readers skip it entirely.
+    {%- endcomment -%}
+    <div class="hero__mark">{% include mark.svg %}</div>
+  </div>
+</div>

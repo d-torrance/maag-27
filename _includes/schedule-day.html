@@ -1,0 +1,65 @@
+{%- comment -%}
+  Renders one day from _data/schedule.yml.
+
+  Single track: two columns only (Time / Session). The day's default room is
+  stated once in the heading; a slot renders an inline room note only when its
+  `room` differs from that default.
+{%- endcomment -%}
+{%- assign day = include.day -%}
+<section class="schedule-day" aria-labelledby="day-{{ day.day }}">
+  <h2 class="schedule-day__heading" id="day-{{ day.day }}">{{ day.label }}</h2>
+
+  {%- if day.room and day.room != "" %}
+  <p class="schedule-day__room">All sessions in <strong>{{ day.room }}</strong> unless noted.</p>
+  {%- endif %}
+  {%- if day.note and day.note != "" %}
+  <p class="schedule-day__note">{{ day.note }}</p>
+  {%- endif %}
+
+  {%- if day.slots and day.slots.size > 0 %}
+  <table class="schedule" role="table">
+    <caption class="visually-hidden">Schedule for {{ day.label }}. All times are Eastern.</caption>
+    <thead role="rowgroup">
+      <tr role="row">
+        <th scope="col" role="columnheader">Time</th>
+        <th scope="col" role="columnheader">Session</th>
+      </tr>
+    </thead>
+    <tbody role="rowgroup">
+      {%- for slot in day.slots %}
+      <tr class="slot slot--{{ slot.kind }}" role="row">
+        <th scope="row" role="rowheader" class="slot__time">
+          <time datetime="{{ day.date | date: '%Y-%m-%d' }}T{{ slot.start }}">{{ slot.start }}</time>&ndash;<time datetime="{{ day.date | date: '%Y-%m-%d' }}T{{ slot.end }}">{{ slot.end }}</time>
+        </th>
+        <td role="cell">
+          {%- if slot.speaker -%}
+            {%- assign sp = site.speakers | where: "ref", slot.speaker | first -%}
+            {%- if sp -%}
+              <span class="slot__who">{{ sp.name }}{% if sp.affiliation and sp.affiliation != "" %}, {{ sp.affiliation }}{% endif %}</span>
+              <a class="slot__what" href="{{ '/talks/' | relative_url }}#{{ sp.ref }}">{{ sp.talk_title }}</a>
+            {%- else -%}
+              <span class="slot__what slot__what--error">Unknown speaker ref: <code>{{ slot.speaker }}</code></span>
+            {%- endif -%}
+          {%- elsif slot.session -%}
+            {%- assign ws = site.workshop | where: "ref", slot.session | first -%}
+            {%- if ws -%}
+              <span class="slot__who">Macaulay2 mini-workshop</span>
+              <a class="slot__what" href="{{ '/workshop/' | relative_url }}#{{ ws.ref }}">{{ ws.title }}</a>
+            {%- else -%}
+              <span class="slot__what slot__what--error">Unknown workshop ref: <code>{{ slot.session }}</code></span>
+            {%- endif -%}
+          {%- else -%}
+            <span class="slot__what">{{ slot.title }}</span>
+          {%- endif -%}
+          {%- if slot.room and slot.room != "" and slot.room != day.room %}
+          <span class="slot__room">{{ slot.room }}</span>
+          {%- endif -%}
+        </td>
+      </tr>
+      {%- endfor %}
+    </tbody>
+  </table>
+  {%- else %}
+  <p><em>The schedule for this day will be announced.</em></p>
+  {%- endif %}
+</section>

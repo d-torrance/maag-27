@@ -1,0 +1,13 @@
+---
+layout: default
+---
+{%- comment -%}
+  Set `hero: true` in the page front matter to render the hero band
+  (see index.md). Layout front matter is not visible as `page.*`, so the
+  flag lives on the page itself.
+{%- endcomment -%}
+<div class="container">
+  <div class="page__body">
+    {{ content }}
+  </div>
+</div>

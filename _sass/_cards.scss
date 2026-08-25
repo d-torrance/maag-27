@@ -1,0 +1,66 @@
+.card-grid {
+  display: grid;
+  gap: var(--space-lg);
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr));
+  list-style: none;
+  margin: 0 0 var(--space-lg);
+  padding: 0;
+}
+
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-rule);
+  border-top: 4px solid var(--gt-gold);
+  border-radius: var(--radius);
+  padding: var(--space-lg);
+  box-shadow: var(--shadow-sm);
+}
+.card__name {
+  font-family: var(--font-slab);
+  font-size: var(--step-1);
+  margin: 0 0 var(--space-2xs);
+}
+.card__meta {
+  color: var(--color-text-muted);
+  font-size: var(--step--1);
+  margin: 0 0 var(--space-sm);
+}
+.card > :last-child { margin-bottom: 0; }
+
+// Talks and posters: full-width blocks with a gold rule, not boxes.
+.talk {
+  border-left: 4px solid var(--gt-gold);
+  padding-left: var(--space-lg);
+  margin-bottom: var(--space-xl);
+  max-width: var(--measure);
+  scroll-margin-top: var(--space-lg);   // so #anchors don't land under the top edge
+}
+.talk__name {
+  font-family: var(--font-slab);
+  font-size: var(--step-1);
+  margin: 0 0 var(--space-2xs);
+}
+.talk__affiliation {
+  color: var(--color-text-muted);
+  font-size: var(--step--1);
+  margin: 0 0 var(--space-sm);
+}
+.talk__title {
+  font-weight: 500;
+  color: var(--color-accent);      // Dark Gold on white, weight 500 -- AA
+  margin: 0 0 var(--space-sm);
+}
+.talk__abstract > :last-child { margin-bottom: 0; }
+
+.badge {
+  display: inline-block;
+  padding: 2px var(--space-xs);
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.badge--plenary  { background: var(--gt-navy);      color: var(--gt-white); }
+.badge--workshop { background: var(--gt-tech-lawn); color: var(--gt-white); }
+.badge--poster   { background: var(--gt-whistle);   color: var(--gt-white); }

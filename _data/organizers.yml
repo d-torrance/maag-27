@@ -1,0 +1,22 @@
+# Organizing committee, listed alphabetically by last name.
+#
+# The templates sort on `last_name`, so new entries can go anywhere in this
+# file and will still appear in the right place.
+#   last_name: required -- the sort key
+#   website:   personal page; omit or "" renders the name as plain text
+#   email:     only include addresses the person has agreed to publish
+- name: "Anton Leykin"
+  last_name: Leykin
+  affiliation: "Georgia Institute of Technology"
+  website: "https://antonleykin.math.gatech.edu/"
+  email: ""
+- name: "Julia Lindberg"
+  last_name: Lindberg
+  affiliation: "Georgia Institute of Technology"
+  website: "https://sites.google.com/view/julialindberg/home"
+  email: ""
+- name: "Doug Torrance"
+  last_name: Torrance
+  affiliation: "Georgia Institute of Technology"
+  website: "https://d-torrance.github.io"
+  email: "dtorrance9@gatech.edu"

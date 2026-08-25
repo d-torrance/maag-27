@@ -1,0 +1,88 @@
+{%- comment -%}
+  MAAG mark: the tropical curve dual to a unimodular triangulation of the
+  degree-5 triangle -- the same motif as the 2018 MAAG logo, redrawn as vector
+  art in the site palette. Grey polygons are the triangulation; the heavy
+  path is the dual curve, with its unbounded rays in the three primitive
+  directions.
+
+  Generated, not hand-written. Colour comes from `currentColor`, so
+  _sass/_hero.scss controls it. Decorative: the parent marks it aria-hidden.
+{%- endcomment -%}
+<svg class="mark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7.011 6.104"
+     fill="none" focusable="false" aria-hidden="true">
+  <g class="mark__grid" fill="none" stroke="currentColor" stroke-width="0.055" stroke-linejoin="round" opacity="0.45">
+  <polygon points="1.006,4.673 2.006,4.673 1.506,3.807"/>
+  <polygon points="2.006,4.673 3.006,4.673 2.506,3.807"/>
+  <polygon points="3.006,4.673 4.006,4.673 3.506,3.807"/>
+  <polygon points="4.006,4.673 5.006,4.673 4.506,3.807"/>
+  <polygon points="5.006,4.673 6.006,4.673 5.506,3.807"/>
+  <polygon points="1.506,3.807 2.506,3.807 2.006,2.941"/>
+  <polygon points="2.506,3.807 3.506,3.807 3.006,2.941"/>
+  <polygon points="3.506,3.807 4.506,3.807 4.006,2.941"/>
+  <polygon points="4.506,3.807 5.506,3.807 5.006,2.941"/>
+  <polygon points="2.006,2.941 3.006,2.941 2.506,2.075"/>
+  <polygon points="3.006,2.941 4.006,2.941 3.506,2.075"/>
+  <polygon points="4.006,2.941 5.006,2.941 4.506,2.075"/>
+  <polygon points="2.506,2.075 3.506,2.075 3.006,1.209"/>
+  <polygon points="3.506,2.075 4.506,2.075 4.006,1.209"/>
+  <polygon points="3.006,1.209 4.006,1.209 3.506,0.343"/>
+  <polygon points="2.006,4.673 1.506,3.807 2.506,3.807"/>
+  <polygon points="3.006,4.673 2.506,3.807 3.506,3.807"/>
+  <polygon points="4.006,4.673 3.506,3.807 4.506,3.807"/>
+  <polygon points="5.006,4.673 4.506,3.807 5.506,3.807"/>
+  <polygon points="2.506,3.807 2.006,2.941 3.006,2.941"/>
+  <polygon points="3.506,3.807 3.006,2.941 4.006,2.941"/>
+  <polygon points="4.506,3.807 4.006,2.941 5.006,2.941"/>
+  <polygon points="3.006,2.941 2.506,2.075 3.506,2.075"/>
+  <polygon points="4.006,2.941 3.506,2.075 4.506,2.075"/>
+  <polygon points="3.506,2.075 3.006,1.209 4.006,1.209"/>
+  </g>
+  <g class="mark__curve" fill="none" stroke="currentColor" stroke-width="0.11" stroke-linecap="round" stroke-linejoin="round">
+  <line x1="2.006" y1="4.095" x2="1.506" y2="4.384"/>
+  <line x1="2.006" y1="4.095" x2="2.006" y2="3.518"/>
+  <line x1="2.006" y1="4.095" x2="2.506" y2="4.384"/>
+  <line x1="3.006" y1="4.095" x2="2.506" y2="4.384"/>
+  <line x1="3.006" y1="4.095" x2="3.006" y2="3.518"/>
+  <line x1="3.006" y1="4.095" x2="3.506" y2="4.384"/>
+  <line x1="4.006" y1="4.095" x2="3.506" y2="4.384"/>
+  <line x1="4.006" y1="4.095" x2="4.006" y2="3.518"/>
+  <line x1="4.006" y1="4.095" x2="4.506" y2="4.384"/>
+  <line x1="5.006" y1="4.095" x2="4.506" y2="4.384"/>
+  <line x1="5.006" y1="4.095" x2="5.006" y2="3.518"/>
+  <line x1="5.006" y1="4.095" x2="5.506" y2="4.384"/>
+  <line x1="2.506" y1="3.229" x2="2.006" y2="3.518"/>
+  <line x1="2.506" y1="3.229" x2="2.506" y2="2.652"/>
+  <line x1="2.506" y1="3.229" x2="3.006" y2="3.518"/>
+  <line x1="3.506" y1="3.229" x2="3.006" y2="3.518"/>
+  <line x1="3.506" y1="3.229" x2="3.506" y2="2.652"/>
+  <line x1="3.506" y1="3.229" x2="4.006" y2="3.518"/>
+  <line x1="4.506" y1="3.229" x2="4.006" y2="3.518"/>
+  <line x1="4.506" y1="3.229" x2="4.506" y2="2.652"/>
+  <line x1="4.506" y1="3.229" x2="5.006" y2="3.518"/>
+  <line x1="3.006" y1="2.363" x2="2.506" y2="2.652"/>
+  <line x1="3.006" y1="2.363" x2="3.006" y2="1.786"/>
+  <line x1="3.006" y1="2.363" x2="3.506" y2="2.652"/>
+  <line x1="4.006" y1="2.363" x2="3.506" y2="2.652"/>
+  <line x1="4.006" y1="2.363" x2="4.006" y2="1.786"/>
+  <line x1="4.006" y1="2.363" x2="4.506" y2="2.652"/>
+  <line x1="3.506" y1="1.497" x2="3.006" y2="1.786"/>
+  <line x1="3.506" y1="1.497" x2="3.506" y2="0.920"/>
+  <line x1="3.506" y1="1.497" x2="4.006" y2="1.786"/>
+  <line x1="1.506" y1="4.384" x2="1.506" y2="5.984"/>
+  <line x1="2.506" y1="4.384" x2="2.506" y2="5.984"/>
+  <line x1="3.506" y1="4.384" x2="3.506" y2="5.984"/>
+  <line x1="4.506" y1="4.384" x2="4.506" y2="5.984"/>
+  <line x1="5.506" y1="4.384" x2="5.506" y2="5.984"/>
+  <line x1="1.506" y1="4.384" x2="0.120" y2="3.584"/>
+  <line x1="2.006" y1="3.518" x2="0.620" y2="2.718"/>
+  <line x1="2.506" y1="2.652" x2="1.120" y2="1.852"/>
+  <line x1="3.006" y1="1.786" x2="1.620" y2="0.986"/>
+  <line x1="3.506" y1="0.920" x2="2.120" y2="0.120"/>
+  <line x1="3.506" y1="0.920" x2="4.891" y2="0.120"/>
+  <line x1="4.006" y1="1.786" x2="5.391" y2="0.986"/>
+  <line x1="4.506" y1="2.652" x2="5.891" y2="1.852"/>
+  <line x1="5.006" y1="3.518" x2="6.391" y2="2.718"/>
+  <line x1="5.506" y1="4.384" x2="6.891" y2="3.584"/>
+  </g>
+
+</svg>

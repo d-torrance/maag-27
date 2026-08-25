@@ -1,0 +1,19 @@
+{%- assign sp = include.speaker -%}
+<article class="talk" id="{{ sp.ref }}">
+  <h3 class="talk__name">
+    {%- if sp.website and sp.website != "" -%}
+      <a href="{{ sp.website }}">{{ sp.name }}</a>
+    {%- else -%}
+      {{ sp.name }}
+    {%- endif -%}
+  </h3>
+  {%- if sp.affiliation and sp.affiliation != "" %}
+  <p class="talk__affiliation">{{ sp.affiliation }}</p>
+  {%- endif %}
+  <p class="talk__title">{{ sp.talk_title }}</p>
+  {%- if sp.content and sp.content != "" %}
+  <div class="talk__abstract">{{ sp.content | markdownify }}</div>
+  {%- else %}
+  <p class="talk__abstract"><em>Abstract to be announced.</em></p>
+  {%- endif %}
+</article>

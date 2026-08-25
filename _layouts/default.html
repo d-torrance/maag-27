@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en' }}">
+<head>
+  {% include head.html %}
+</head>
+<body{% if page.math %} class="tex2jax_ignore"{% endif %}>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  {% include header.html %}
+
+  {%- if page.hero %}{% include hero.html %}{% endif %}
+
+  <main id="main-content" tabindex="-1">
+    {{ content }}
+  </main>
+
+  {% include footer.html %}
+
+  <script src="{{ '/assets/js/nav.js' | relative_url }}"></script>
+  {%- if page.math %}{% include mathjax.html %}{% endif %}
+</body>
+</html>

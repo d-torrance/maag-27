@@ -1,0 +1,133 @@
+.site-header {
+  background: var(--color-header-bg);
+  color: var(--color-header-text);
+  border-bottom: 4px solid var(--gt-gold);
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+  padding-block: var(--space-sm);
+}
+
+// Text wordmark -- deliberately NOT the Georgia Tech logo, whose use is
+// restricted to campus units (brand.gatech.edu/our-look/logos).
+.wordmark {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  color: var(--color-header-text);
+  text-decoration: none;
+  line-height: 1.05;
+}
+.wordmark__gt {
+  font-family: var(--font-slab);
+  font-size: var(--step--1);
+  font-weight: 500;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--gt-gold);          /* 5.55:1 on navy */
+}
+.wordmark__event {
+  font-family: var(--font-slab);
+  font-size: var(--step-1);
+  font-weight: 700;
+}
+
+.nav-toggle {
+  display: none;
+  align-items: center;
+  gap: var(--space-xs);
+  min-height: 44px;               /* WCAG 2.5.8 target size */
+  padding: var(--space-xs) var(--space-sm);
+  background: transparent;
+  color: var(--color-header-text);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: var(--radius);
+  font: inherit;
+  font-weight: 500;
+  cursor: pointer;
+}
+.nav-toggle__bars,
+.nav-toggle__bars::before,
+.nav-toggle__bars::after {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background: currentColor;
+  content: "";
+}
+.nav-toggle__bars { position: relative; }
+.nav-toggle__bars::before { position: absolute; top: -6px; }
+.nav-toggle__bars::after  { position: absolute; top: 6px; }
+
+.site-nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs) var(--space-md);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.site-nav__link {
+  display: inline-block;
+  padding: var(--space-xs) 2px;
+  color: var(--color-header-text);
+  text-decoration: none;
+  font-size: var(--step--1);
+  font-weight: 500;
+  border-bottom: 3px solid transparent;
+}
+.site-nav__link:hover,
+.site-nav__link:focus-visible {
+  color: var(--gt-buzz);
+  border-bottom-color: var(--gt-buzz);
+}
+
+// Current page. Colour is not the only cue -- weight changes too (SC 1.4.1).
+.site-nav__link.is-current {
+  color: var(--gt-buzz);
+  font-weight: 700;
+  border-bottom-color: var(--gt-buzz);
+}
+
+.site-nav__item--cta .site-nav__link {
+  background: var(--gt-buzz);
+  color: var(--gt-navy);
+  font-weight: 700;
+  padding: var(--space-xs) var(--space-md);
+  border-radius: var(--radius);
+  border-bottom-color: transparent;
+}
+.site-nav__item--cta .site-nav__link:hover,
+.site-nav__item--cta .site-nav__link:focus-visible {
+  background: var(--gt-white);
+  color: var(--gt-navy);
+  border-bottom-color: transparent;
+}
+
+@media (max-width: 860px) {
+  // Only collapse behind the toggle when JS is available to open it again.
+  .has-js .nav-toggle { display: inline-flex; }
+  .has-js .site-nav   { display: none; flex-basis: 100%; }
+  .has-js .site-nav.is-open { display: block; }
+
+  .site-nav__list { flex-direction: column; gap: 0; }
+  .site-nav__link {
+    display: block;
+    padding: var(--space-sm) 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  }
+  .site-nav__link.is-current {
+    border-left: 4px solid var(--gt-buzz);
+    padding-left: var(--space-sm);
+  }
+  .site-nav__item--cta .site-nav__link {
+    margin-block: var(--space-sm);
+    text-align: center;
+  }
+}

@@ -1,0 +1,118 @@
+# MAAG 2027 schedule.
+#
+# SINGLE TRACK -- there are no parallel sessions. Each day is a flat, ordered
+# list of slots, so overlapping talks are not representable by construction.
+#
+# Each slot needs `start`, `end`, `kind`, and exactly ONE of:
+#   title:    free text (breaks, meals, logistics)
+#   speaker:  a `ref` from a file in _speakers/
+#   session:  a `ref` from a file in _workshop/
+#
+# `kind` is one of: logistics | talk | workshop | poster | break | social
+# `room` is optional and only needed when a slot is NOT in the day's default
+# room -- it renders as a small inline note.
+
+- day: friday
+  date: 2027-04-16
+  label: "Friday, April 16"
+  room: "Skiles 005"
+  note: "Registration opens at 12:30 p.m. in the Skiles Building lobby."
+  slots:
+    - start: "13:00"
+      end: "13:15"
+      kind: logistics
+      title: "Welcome and opening remarks"
+    - start: "13:15"
+      end: "14:30"
+      kind: workshop
+      session: m2-intro
+    - start: "14:30"
+      end: "15:00"
+      kind: break
+      title: "Coffee"
+      room: "Skiles Atrium"
+    - start: "15:00"
+      end: "16:15"
+      kind: workshop
+      session: m2-nag
+    - start: "16:15"
+      end: "16:30"
+      kind: break
+      title: "Break"
+      room: "Skiles Atrium"
+    - start: "16:30"
+      end: "17:45"
+      kind: workshop
+      session: m2-tda
+    - start: "18:30"
+      end: "20:30"
+      kind: social
+      title: "Informal dinner (details to be announced)"
+      room: "TBD"
+- day: saturday
+  date: 2027-04-17
+  label: "Saturday, April 17"
+  room: "Skiles 005"
+  slots:
+    - start: "09:00"
+      end: "09:30"
+      kind: break
+      title: "Coffee and pastries"
+      room: "Skiles Atrium"
+    - start: "09:30"
+      end: "10:20"
+      kind: talk
+      speaker: example-speaker
+    - start: "10:30"
+      end: "11:20"
+      kind: talk
+      title: "Invited talk (speaker to be announced)"
+    - start: "11:30"
+      end: "12:20"
+      kind: talk
+      title: "Invited talk (speaker to be announced)"
+    - start: "12:20"
+      end: "14:00"
+      kind: break
+      title: "Lunch"
+    - start: "14:00"
+      end: "14:50"
+      kind: talk
+      title: "Invited talk (speaker to be announced)"
+    - start: "15:00"
+      end: "15:30"
+      kind: poster
+      title: "Poster blitz"
+    - start: "15:30"
+      end: "17:30"
+      kind: poster
+      title: "Poster session and reception"
+      room: "Skiles Atrium"
+
+- day: sunday
+  date: 2027-04-18
+  label: "Sunday, April 18"
+  room: "Skiles 005"
+  note: "We finish before lunch so that people can travel home on Sunday afternoon."
+  slots:
+    - start: "08:30"
+      end: "09:00"
+      kind: break
+      title: "Coffee and pastries"
+      room: "Skiles Atrium"
+    - start: "09:00"
+      end: "09:50"
+      kind: talk
+      title: "Invited talk (speaker to be announced)"
+    - start: "10:00"
+      end: "10:50"
+      kind: talk
+      title: "Invited talk (speaker to be announced)"
+    - start: "11:00"
+      end: "11:50"
+      kind: talk
+      title: "Invited talk (speaker to be announced)"
+    - start: "11:50"
+      end: "12:00"
+      kind: logistics
+      title: "Closing remarks"

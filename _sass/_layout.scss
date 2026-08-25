@@ -1,0 +1,58 @@
+.container {
+  width: min(100% - 2rem, var(--container));
+  margin-inline: auto;
+}
+
+// Cap the line length of running prose without capping tables and grids.
+.page__body > p,
+.page__body > ul,
+.page__body > ol,
+.page__body > dl,
+.page__body > blockquote,
+.prose {
+  max-width: var(--measure);
+}
+
+.page__title    { margin-bottom: var(--space-xs); }
+.page__subtitle {
+  font-size: var(--step-1);
+  color: var(--color-text-muted);
+  max-width: var(--measure);
+  margin-bottom: var(--space-xl);
+}
+
+.section       { padding-block: var(--space-xl); }
+.section--tint { background: var(--color-bg-alt); }
+
+.plain-list { list-style: none; margin: 0 0 var(--space-md); padding: 0; }
+.plain-list li { margin-bottom: var(--space-2xs); }
+
+.skip-link {
+  position: absolute;
+  left: var(--space-md);
+  top: -4rem;
+  z-index: 100;
+  padding: var(--space-xs) var(--space-md);
+  background: var(--gt-buzz);
+  color: var(--gt-navy);
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: var(--radius);
+  transition: top 120ms ease-in;
+}
+.skip-link:focus { top: var(--space-md); }
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip-path: inset(50%);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+// `main` takes tabindex="-1" for the skip link; don't show a ring on it.
+main:focus { outline: none; }

@@ -1,0 +1,17 @@
+{%- assign p = include.poster -%}
+<article class="talk" id="{{ p.ref }}">
+  <h3 class="talk__name">
+    {%- if p.website and p.website != "" -%}
+      <a href="{{ p.website }}">{{ p.name }}</a>
+    {%- else -%}
+      {{ p.name }}
+    {%- endif -%}
+  </h3>
+  {%- if p.affiliation and p.affiliation != "" %}
+  <p class="talk__affiliation">{{ p.affiliation }}{% if p.career_stage and p.career_stage != "" %} &middot; {{ p.career_stage }}{% endif %}</p>
+  {%- endif %}
+  <p class="talk__title">{{ p.poster_title }}</p>
+  {%- if p.content and p.content != "" %}
+  <div class="talk__abstract">{{ p.content | markdownify }}</div>
+  {%- endif %}
+</article>

@@ -1,0 +1,37 @@
+# Previous Meetings on Applied Algebraic Geometry.
+#   url:      empty renders as plain text rather than a dead link
+#   archived: set true when `url` points at a Wayback capture because the
+#             original site is gone -- the table then labels it as archived
+- year: 2026
+  host: Clemson University
+  location: "Clemson, South Carolina"
+  url: "https://klee669.github.io/maag"
+- year: 2025
+  host: Auburn University
+  location: "Auburn, Alabama"
+  url: "https://johndcobb.github.io/organizing/MAAG2025/"
+- year: 2023
+  host: Georgia Institute of Technology
+  location: "Atlanta, Georgia"
+  url: "https://sites.google.com/view/maag-2023/home"
+- year: 2019
+  host: Georgia Institute of Technology
+  location: "Atlanta, Georgia"
+  url: "https://sites.google.com/view/maag2019/"
+- year: 2018
+  host: Georgia Institute of Technology
+  location: "Atlanta, Georgia"
+  url: "https://sites.google.com/view/maag-2018/home"
+- year: 2016
+  host: Clemson University
+  location: "Clemson, South Carolina"
+  # The 2016 meeting ran under an earlier name, which is why the archived
+  # page's title does not say "MAAG" -- the series was renamed afterwards to
+  # avoid the political connotations the old acronym had acquired. This is the
+  # right link; the original site (math.clemson.edu/aca/maga16/) is offline.
+  url: "https://web.archive.org/web/20250430035832/https://www.math.clemson.edu/aca/maga16/"
+  archived: true
+- year: 2015
+  host: Georgia Institute of Technology
+  location: "Atlanta, Georgia"
+  url: ""

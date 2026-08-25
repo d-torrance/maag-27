@@ -1,0 +1,38 @@
+// Generic content tables (past meetings, and anything written in Markdown).
+.page__body table:not(.schedule) {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--step--1);
+}
+.page__body table:not(.schedule) th,
+.page__body table:not(.schedule) td {
+  text-align: left;
+  padding: var(--space-sm) var(--space-md);
+  border-bottom: 1px solid var(--color-rule);
+  vertical-align: top;
+}
+.page__body table:not(.schedule) thead th {
+  background: var(--gt-navy);
+  color: var(--gt-white);
+  font-family: var(--font-slab);
+  font-weight: 500;
+  border-bottom: none;
+}
+.page__body table:not(.schedule) tbody tr:nth-child(even) {
+  background: var(--gt-diploma);
+}
+
+// Narrow screens: let a wide table scroll inside its own box rather than
+// forcing the whole page sideways.
+.table-scroll {
+  overflow-x: auto;
+  margin-bottom: var(--space-md);
+}
+
+.meeting-archived {
+  display: inline-block;
+  font-weight: 400;
+  font-size: 0.85em;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
