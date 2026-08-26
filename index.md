@@ -9,7 +9,7 @@ hero: true
 The **Meeting on Applied Algebraic Geometry (MAAG)** is a regional gathering
 that attracts participants primarily from the Southeastern United States. MAAG
 2027 will be held at the [Georgia Tech School of Mathematics](https://math.gatech.edu)
-in Atlanta from **Friday, April 16 through Sunday, April 18, 2027**.
+in Atlanta from **Friday, April 23 through Sunday, April 25, 2027**.
 
 The meeting brings together researchers who use algebraic geometry as a tool —
 in optimization, statistics, numerical computation, combinatorics,

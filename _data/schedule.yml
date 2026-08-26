@@ -13,8 +13,8 @@
 # room -- it renders as a small inline note.
 
 - day: friday
-  date: 2027-04-16
-  label: "Friday, April 16"
+  date: 2027-04-23
+  label: "Friday, April 23"
   room: "Skiles 005"
   note: "Registration opens at 12:30 p.m. in the Skiles Building lobby."
   slots:
@@ -50,8 +50,8 @@
       title: "Informal dinner (details to be announced)"
       room: "TBD"
 - day: saturday
-  date: 2027-04-17
-  label: "Saturday, April 17"
+  date: 2027-04-24
+  label: "Saturday, April 24"
   room: "Skiles 005"
   slots:
     - start: "09:00"
@@ -90,8 +90,8 @@
       room: "Skiles Atrium"
 
 - day: sunday
-  date: 2027-04-18
-  label: "Sunday, April 18"
+  date: 2027-04-25
+  label: "Sunday, April 25"
   room: "Skiles 005"
   note: "We finish before lunch so that people can travel home on Sunday afternoon."
   slots:

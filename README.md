@@ -1,7 +1,7 @@
 # MAAG 2027 website
 
 Source for <https://d-torrance.github.io/maag-27>, the site for the Meeting on
-Applied Algebraic Geometry at Georgia Tech, April 16–18, 2027.
+Applied Algebraic Geometry at Georgia Tech, April 23–25, 2027.
 
 Built with [Jekyll](https://jekyllrb.com) and deployed to GitHub Pages by the
 workflow in `.github/workflows/pages.yml` on every push to `main`.

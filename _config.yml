@@ -4,7 +4,7 @@
 title: "MAAG 2027"
 tagline: "Meeting on Applied Algebraic Geometry"
 description: >-
-  The Meeting on Applied Algebraic Geometry (MAAG 2027), April 16-18, 2027, at
+  The Meeting on Applied Algebraic Geometry (MAAG 2027), April 23-25, 2027, at
   the Georgia Institute of Technology School of Mathematics in Atlanta. A
   regional gathering with invited talks, a Macaulay2 mini-workshop, and a
   poster session.
@@ -22,9 +22,9 @@ github_username: d-torrance
 # Event facts -- single source of truth for the templates.
 # ---------------------------------------------------------------------------
 event:
-  start_date: 2027-04-16
-  end_date: 2027-04-18
-  dates_display: "April 16–18, 2027"
+  start_date: 2027-04-23
+  end_date: 2027-04-25
+  dates_display: "April 23–25, 2027"
   days_display: "Friday-Sunday"
   host: "Georgia Institute of Technology"
   venue: "Skiles Building, Georgia Institute of Technology"
