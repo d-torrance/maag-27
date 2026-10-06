@@ -65,10 +65,10 @@ obvious ones on collection documents:
 - **`website:`, not `url:`** — `url` is the document's own address, so a `url:`
   in front matter is ignored and the link would point at a dead internal page.
 
-Delete `_speakers/example-speaker.md` once real speakers are added.
-
-Posters work the same way in `_posters/` (use `poster_title` instead of
-`talk_title`), and Macaulay2 workshop sessions in `_workshop/`.
+Posters work the same way in `_posters/`: `ref`, `name`, `last_name`, and
+`poster_title` are required; `affiliation`, `career_stage` (`undergraduate` |
+`graduate student` | `postdoc`), `website`, and `math` are optional.
+Macaulay2 workshop sessions live in `_workshop/`.
 
 ### Editing the schedule
 
@@ -199,4 +199,3 @@ new foreground/background pair.
 - [ ] Fill in the Lodging section of `participant-info.md` once a hotel is chosen
 - [ ] Fill in the Parking section of `participant-info.md` once a visitor lot is confirmed
 - [ ] Confirm room assignments in `_data/schedule.yml`
-- [ ] Delete `_speakers/example-speaker.md` and `_posters/example-poster.md`

@@ -12,7 +12,7 @@ math: true
 
 {% if speakers.size == 0 %}
 
-Speakers for MAAG 2027 have not yet been announced. Check back in fall 2026, or
+Speakers for MAAG 2027 have not yet been announced. Check back soon, or
 see the [schedule]({{ '/schedule/' | relative_url }}) for the shape of the
 program.
 

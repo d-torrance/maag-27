@@ -62,7 +62,7 @@
     - start: "09:30"
       end: "10:20"
       kind: talk
-      speaker: example-speaker
+      title: "Invited talk (speaker to be announced)"
     - start: "10:30"
       end: "11:20"
       kind: talk
