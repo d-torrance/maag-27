@@ -9,7 +9,7 @@ subtitle: "MAAG 2027 is supported by the National Science Foundation."
 ## NSF support
 
 MAAG 2027 is supported by the National Science Foundation,
-{{ nsf.program }}, under award **{{ nsf.award_number }}**.
+{{ nsf.program }}, under award [**{{ nsf.award_number }}**]({{ nsf.url }}).
 
 {{ nsf.disclaimer }}
 

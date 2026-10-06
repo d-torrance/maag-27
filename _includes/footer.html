@@ -34,7 +34,7 @@
         <h2 class="site-footer__heading">Support</h2>
         <p>
           This meeting is supported by the National Science Foundation
-          under award {{ nsf.award_number }}.
+          under award <a href="{{ nsf.url }}">{{ nsf.award_number }}</a>.
         </p>
         <ul class="plain-list">
           {%- for s in site.data.support.other %}

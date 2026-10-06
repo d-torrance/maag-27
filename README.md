@@ -195,7 +195,6 @@ new foreground/background pair.
 
 ## Before publishing
 
-- [ ] Replace `DMS-XXXXXXX` in `_data/support.yml` with the real NSF award number
 - [ ] Create the Google Form, fill in `registration.url` and the `Register` nav entry, set `open: true`
 - [ ] Fill in the Lodging section of `participant-info.md` once a hotel is chosen
 - [ ] Fill in the Parking section of `participant-info.md` once a visitor lot is confirmed
