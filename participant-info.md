@@ -13,11 +13,6 @@ School of Mathematics:
 > 686 Cherry Street NW
 > Atlanta, GA 30332
 
-The School of Mathematics occupies the first and second floors. All sessions,
-including the Macaulay2 mini-workshop, are in Skiles 005. Room assignments will
-be confirmed closer to the meeting — see the
-[schedule]({{ '/schedule/' | relative_url }}).
-
 ## Getting to Atlanta
 
 **By air.** Hartsfield-Jackson Atlanta International Airport (**ATL**) is the

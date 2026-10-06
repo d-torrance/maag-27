@@ -15,7 +15,7 @@
 - day: friday
   date: 2027-04-23
   label: "Friday, April 23"
-  room: "Skiles 005"
+  room: "Skiles TBA"
   note: "Registration opens at 12:30 p.m. in the Skiles Building lobby."
   slots:
     - start: "13:00"
@@ -30,7 +30,6 @@
       end: "15:00"
       kind: break
       title: "Coffee"
-      room: "Skiles Atrium"
     - start: "15:00"
       end: "16:15"
       kind: workshop
@@ -39,7 +38,6 @@
       end: "16:30"
       kind: break
       title: "Break"
-      room: "Skiles Atrium"
     - start: "16:30"
       end: "17:45"
       kind: workshop
@@ -52,13 +50,12 @@
 - day: saturday
   date: 2027-04-24
   label: "Saturday, April 24"
-  room: "Skiles 005"
+  room: "Skiles TBA"
   slots:
     - start: "09:00"
       end: "09:30"
       kind: break
       title: "Coffee and pastries"
-      room: "Skiles Atrium"
     - start: "09:30"
       end: "10:20"
       kind: talk
@@ -87,19 +84,17 @@
       end: "17:30"
       kind: poster
       title: "Poster session and reception"
-      room: "Skiles Atrium"
 
 - day: sunday
   date: 2027-04-25
   label: "Sunday, April 25"
-  room: "Skiles 005"
+  room: "Skiles TBA"
   note: "We finish before lunch so that people can travel home on Sunday afternoon."
   slots:
     - start: "08:30"
       end: "09:00"
       kind: break
       title: "Coffee and pastries"
-      room: "Skiles Atrium"
     - start: "09:00"
       end: "09:50"
       kind: talk
