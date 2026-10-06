@@ -68,7 +68,9 @@ obvious ones on collection documents:
 Posters work the same way in `_posters/`: `ref`, `name`, `last_name`, and
 `poster_title` are required; `affiliation`, `career_stage` (`undergraduate` |
 `graduate student` | `postdoc`), `website`, and `math` are optional.
-Macaulay2 workshop sessions live in `_workshop/`.
+Macaulay2 workshop sessions live in `_workshop/`: `ref`, `order` (sort key),
+`title`, `leader`, `leader_affiliation`, `duration`, `level` (`introductory` |
+`intermediate`), and `requirements`, with the description as the body.
 
 ### Editing the schedule
 
