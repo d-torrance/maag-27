@@ -37,8 +37,8 @@ registration:
   # Flip to true once the Google Form exists and `url` below is filled in.
   open: false
   url: "https://docs.google.com/forms/d/e/REPLACE_ME/viewform"
-  deadline_display: "March 12, 2027"
-  travel_support_deadline_display: "February 12, 2027"
+  # Shown as "Registration closes ..." under the Register buttons once set.
+  deadline_display: ""
   closed_message: "Registration opens soon"
 
 # ---------------------------------------------------------------------------

@@ -26,9 +26,8 @@ participants. **Priority is given to graduate students, postdocs, and
 early-career researchers** who do not have other sources of travel funding, and
 to participants from institutions in the Southeast.
 
-To apply, complete the travel-support section of the registration form by
-**{{ site.registration.travel_support_deadline_display }}**. Applications
-received after that date will be considered only if funds remain.
+To apply, complete the travel-support section of the registration form. The
+application deadline will be announced here.
 
 <div class="hero__actions">
   {% include register-button.html variant="btn--solid-navy" %}

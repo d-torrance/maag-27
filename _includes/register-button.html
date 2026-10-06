@@ -9,7 +9,7 @@
   <a class="btn {{ include.variant | default: 'btn--primary' }}"
      href="{{ r.url }}" target="_blank" rel="noopener">{{ include.label | default: "Register for MAAG 2027" }}<span
      class="visually-hidden"> (opens in a new tab)</span></a>
-  {%- if include.show_deadline and r.deadline_display %}
+  {%- if include.show_deadline and r.deadline_display and r.deadline_display != "" %}
   <p class="cta-note">Registration closes {{ r.deadline_display }}.</p>
   {%- endif -%}
 {%- else -%}
