@@ -100,7 +100,8 @@ loud pink "Unknown speaker ref" on that row rather than failing silently.
 `_config.yml`, under `registration:`. Set `open: true` and fill in `url` with
 the Google Form link once it exists; also update the `Register` entry at the
 bottom of the `nav:` list with the same URL. While `open: false`, every Register
-button renders as a greyed-out "Registration opens in fall 2026" placeholder.
+button (including the one in the header nav) renders as a greyed-out
+"Registration opens soon" placeholder (`closed_message`).
 
 ### Adding a nav item
 

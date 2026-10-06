@@ -109,6 +109,13 @@
   color: var(--gt-navy);
   border-bottom-color: transparent;
 }
+// Registration not yet open: greyed-out placeholder, as .btn[aria-disabled].
+.site-nav__item--cta .site-nav__link[aria-disabled="true"],
+.site-nav__item--cta .site-nav__link[aria-disabled="true"]:hover {
+  background: var(--color-rule);
+  color: #3D3D3D;
+  cursor: default;
+}
 
 @media (max-width: 860px) {
   // Only collapse behind the toggle when JS is available to open it again.

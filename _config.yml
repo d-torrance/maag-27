@@ -39,7 +39,7 @@ registration:
   url: "https://docs.google.com/forms/d/e/REPLACE_ME/viewform"
   deadline_display: "March 12, 2027"
   travel_support_deadline_display: "February 12, 2027"
-  closed_message: "Registration opens in fall 2026"
+  closed_message: "Registration opens soon"
 
 # ---------------------------------------------------------------------------
 # Navigation -- adding a page is one entry here.

@@ -14,7 +14,11 @@
     <nav id="site-nav" class="site-nav" aria-label="Main">
       <ul class="site-nav__list">
         {%- for item in site.nav %}
-          {%- if item.external -%}
+          {%- if item.cta and site.registration.open != true -%}
+            <li class="site-nav__item site-nav__item--cta">
+              <span class="site-nav__link" aria-disabled="true">{{ site.registration.closed_message }}</span>
+            </li>
+          {%- elsif item.external -%}
             <li class="site-nav__item{% if item.cta %} site-nav__item--cta{% endif %}">
               <a class="site-nav__link" href="{{ item.url }}"
                  target="_blank" rel="noopener">{{ item.title }}<span
