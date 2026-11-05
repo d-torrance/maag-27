@@ -57,6 +57,10 @@ The abstract goes here, in ordinary Markdown. LaTeX works:
 $$\mathrm{Gr}(2,n)$$ and $\mathbb{P}^n$ both render.
 ```
 
+`talk_title` and the abstract are optional. A speaker without a title is
+listed by name and affiliation only, so a file can be added as soon as the
+speaker confirms and filled in later.
+
 Two front matter keys are deliberately named oddly, because Jekyll reserves the
 obvious ones on collection documents:
 

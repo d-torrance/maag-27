@@ -36,7 +36,7 @@
             {%- assign sp = site.speakers | where: "ref", slot.speaker | first -%}
             {%- if sp -%}
               <span class="slot__who">{{ sp.name }}{% if sp.affiliation and sp.affiliation != "" %}, {{ sp.affiliation }}{% endif %}</span>
-              <a class="slot__what" href="{{ '/talks/' | relative_url }}#{{ sp.ref }}">{{ sp.talk_title }}</a>
+              <a class="slot__what" href="{{ '/talks/' | relative_url }}#{{ sp.ref }}">{% if sp.talk_title and sp.talk_title != "" %}{{ sp.talk_title }}{% else %}Title to be announced{% endif %}</a>
             {%- else -%}
               <span class="slot__what slot__what--error">Unknown speaker ref: <code>{{ slot.speaker }}</code></span>
             {%- endif -%}

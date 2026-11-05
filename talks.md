@@ -18,6 +18,9 @@ program.
 
 {% else %}
 
+Confirmed speakers are listed below. Titles and abstracts will be posted as
+they become available.
+
 {% if plenary.size > 0 %}
 ## Plenary talks
 {% for sp in plenary %}{% include speaker-card.html speaker=sp %}{% endfor %}
