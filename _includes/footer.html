@@ -23,7 +23,6 @@
             {%- else -%}
               {{ o.name }}
             {%- endif -%}
-            {%- if o.affiliation and o.affiliation != "" and o.affiliation != site.event.host %} <span class="site-footer__muted">({{ o.affiliation }})</span>{% endif -%}
           </li>
           {%- endfor %}
         </ul>
