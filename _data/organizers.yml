@@ -10,6 +10,11 @@
   affiliation: "Georgia Institute of Technology"
   website: "https://sites.google.com/site/grrigg/"
   email: ""
+- name: "Michael Burr"
+  last_name: Burr
+  affiliation: "Clemson University"
+  website: "https://cecas.clemson.edu/~burr2/"
+  email: ""
 - name: "Anton Leykin"
   last_name: Leykin
   affiliation: "Georgia Institute of Technology"
@@ -19,6 +24,11 @@
   last_name: Lindberg
   affiliation: "Georgia Institute of Technology"
   website: "https://sites.google.com/view/julialindberg/home"
+  email: ""
+- name: "Luke Oeding"
+  last_name: Oeding
+  affiliation: "Auburn University"
+  website: "https://webhome.auburn.edu/~lao0004/"
   email: ""
 - name: "Doug Torrance"
   last_name: Torrance
